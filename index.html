@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'; frame-src 'none'; object-src 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#b4440e">
+<meta name="description" content="REZONANȚA — ghid și instrumente offline pentru comunicare și media: mesaj, canale, comunicat de presă, interviu, claritate, plan, criză.">
+<title>REZONANȚA — Cum faci ca lumea să te asculte</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='6' fill='%23b4440e'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%23b4440e' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='27' fill='none' stroke='%23b4440e' stroke-width='3' opacity='.5'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#f6f4ef;--card:#fff;--ink:#1d2330;--mut:#5d6677;--acc:#b4440e;--acc2:#0f6b6b;--line:#ddd8cb;--ok:#2f7d32;--warn:#8a5a00;--bad:#b3261e;--mark:#ffe2a8;--on:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#14171e;--card:#1c212b;--ink:#e8eaf0;--mut:#a0a9bb;--acc:#ff8a4c;--acc2:#4cc9c0;--line:#2c3342;--ok:#6fcf74;--warn:#f0b650;--bad:#ff7b72;--mark:#5a4310;--on:#10131a}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+:focus-visible{outline:3px solid var(--acc2);outline-offset:2px;border-radius:6px}
+header{max-width:1180px;margin:auto;padding:18px 16px 8px;display:flex;gap:12px;align-items:center}
+header svg{flex:0 0 auto;width:40px;height:40px}
+header>div{min-width:0}
+h1{margin:0;font-size:clamp(1.1rem,6vw,1.5rem);letter-spacing:.08em;color:var(--acc);line-height:1.1;overflow-wrap:anywhere}
+header p{margin:2px 0 0;color:var(--mut);font-size:.92rem}
+.app{max-width:1180px;margin:0 auto}
+nav{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto;padding:8px 12px;scrollbar-width:none;overscroll-behavior-x:contain;scroll-snap-type:x proximity}
+nav::-webkit-scrollbar{display:none}
+nav button{flex:0 0 auto;scroll-snap-align:center;min-height:44px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 15px;border-radius:999px;font:inherit;font-size:.95rem;cursor:pointer;touch-action:manipulation}
+nav button.on{background:var(--acc);border-color:var(--acc);color:var(--on)}
+nav .ni{display:none}
+main{min-width:0;padding:14px 14px calc(80px + env(safe-area-inset-bottom))}
+section{display:none}section.on{display:block}
+h2{font-size:1.3rem;margin:6px 0 4px;line-height:1.25}
+.lead{color:var(--mut);margin:0 0 14px;max-width:70ch}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin:0 0 12px}
+details.card{padding:0}
+details.card>summary{cursor:pointer;padding:12px 14px;min-height:48px;font-weight:600;list-style:none;display:flex;gap:10px;align-items:baseline;touch-action:manipulation}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary::after{content:"+";margin-left:auto;color:var(--mut);font-weight:400;font-size:1.3rem;line-height:1}
+details.card[open]>summary::after{content:"–"}
+details.card>summary .n{color:var(--acc);font-variant-numeric:tabular-nums}
+details.card>summary small{display:block;font-weight:400;color:var(--mut)}
+details.card .body{padding:0 14px 14px}
+details.card .body p{max-width:70ch}
+label{display:block;font-weight:600;font-size:.92rem;margin:12px 0 4px}
+label small{font-weight:400;color:var(--mut)}
+input,textarea,select{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 11px;min-height:44px}
+input[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:var(--bad);outline:2px solid var(--bad)}
+textarea{min-height:92px;resize:vertical}
+.row{display:grid;gap:0 12px;grid-template-columns:minmax(0,1fr)}
+.row>div{min-width:0}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.btn{min-height:44px;border:0;background:var(--acc2);color:var(--on);border-radius:8px;padding:9px 16px;font:inherit;font-weight:600;cursor:pointer;touch-action:manipulation}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line);font-weight:500}
+.btn.armed{background:var(--bad);color:var(--on);border-color:var(--bad)}
+.btn.sm{min-height:44px;min-width:44px;padding:4px 10px}
+.cnt{font-size:.82rem;color:var(--mut);text-align:right;min-height:1.2em}
+.cnt.bad{color:var(--bad)}.cnt.ok{color:var(--ok)}
+pre.out{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--bg);border:1px dashed var(--line);border-radius:8px;padding:12px;font:inherit;margin:8px 0 0}
+ul{padding-left:20px;margin:6px 0}li{margin:4px 0}
+.chk{display:flex;gap:10px;align-items:flex-start;margin:0;padding:8px 0;font-weight:400;min-height:44px}
+.chk input{width:22px;height:22px;min-height:0;flex:0 0 auto;margin:1px 0 0;accent-color:var(--acc2)}
+.bar{height:12px;background:var(--bg);border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ok);transition:width .3s}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:8px;margin:12px 0}
+.stat{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.stat b{display:block;font-size:1.25rem}.stat span{font-size:.8rem;color:var(--mut)}
+.hl{line-height:1.9;overflow-wrap:anywhere}.hl .long{background:var(--mark);border-radius:3px;padding:0 2px}
+.hl mark{background:transparent;color:var(--bad);text-decoration:underline wavy;text-underline-offset:3px}
+.pill{display:inline-block;min-width:44px;text-align:center;padding:1px 8px;border-radius:99px;color:var(--on);font-size:.82rem;font-weight:600}
+.q{border-left:3px solid var(--acc);padding:6px 12px;margin:10px 0;background:var(--bg);border-radius:0 8px 8px 0}
+.outs{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+.outs>.card{margin:0}
+#msgOut,#prOut,#ivOut,#crOut,#txtOut,#rec{scroll-margin-top:72px}
+.foot{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:6px 0 10px}
+footer{max-width:1180px;margin:auto;text-align:center;color:var(--mut);font-size:.82rem;padding:6px 16px 28px}
+#toast{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom));transform:translate(-50%,16px);opacity:0;pointer-events:none;background:var(--ink);color:var(--bg);padding:11px 16px;border-radius:10px;max-width:min(92vw,520px);z-index:50;transition:opacity .2s,transform .2s;font-size:.95rem}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+/* plan: carduri pe ecrane mici/medii, tabel pe desktop */
+#planT{width:100%;border-collapse:collapse}
+#planT thead{display:none}
+#planT tbody,#planT tr,#planT td{display:block}
+#planT tr{border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin-bottom:10px;background:var(--bg)}
+#planT td{padding:3px 0;min-width:0}
+#planT td::before{content:attr(data-l);display:block;font-weight:600;font-size:.82rem;color:var(--mut);margin-bottom:2px}
+#planT td.x::before{display:none}
+#planT td.x{text-align:right}
+#planT textarea{min-height:64px;background:var(--card)}
+@media (min-width:600px){
+  main{padding-left:20px;padding-right:20px}
+  .row.c2,.row.c3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #planT tr{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+  #planT td.x{grid-column:1/-1}
+}
+@media (min-width:760px){.row.c3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1000px){
+  header{padding:22px 20px 10px}
+  .app{display:grid;grid-template-columns:220px minmax(0,1fr);gap:28px;align-items:start;padding:0 20px}
+  nav{top:16px;flex-direction:column;overflow:visible;border:1px solid var(--line);border-radius:14px;background:var(--card);padding:8px;gap:2px;scroll-snap-type:none}
+  nav button{border:0;background:transparent;text-align:left;border-radius:10px;display:flex;gap:10px;align-items:center;padding:8px 12px}
+  nav button:hover{background:var(--bg)}
+  nav button.on,nav button.on:hover{background:var(--acc);color:var(--on)}
+  nav .ni{display:inline-block;width:1.3em;opacity:.7;font-variant-numeric:tabular-nums}
+  main{padding:4px 0 60px}
+  #planT{display:table}
+  #planT thead{display:table-header-group}
+  #planT tbody{display:table-row-group}
+  #planT tr{display:table-row;border:0;padding:0;margin:0;background:none}
+  #planT td,#planT th{display:table-cell;border:1px solid var(--line);padding:5px;vertical-align:top}
+  #planT th{background:var(--bg);text-align:left;font-size:.88rem}
+  #planT td::before{display:none}
+  #planT td.x{text-align:center;width:56px}
+  #planT textarea{min-height:60px}
+}
+@media (min-width:1100px){#msgOut.outs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{
+  header svg,nav,.btn,.foot,#toast{display:none!important}
+  section{display:block!important;page-break-after:always}
+  .app{display:block}
+  body{background:#fff;color:#000}.card{border-color:#999;break-inside:avoid}
+  #planT{display:table}#planT thead{display:table-header-group}#planT tbody{display:table-row-group}#planT tr{display:table-row;border:0}#planT td,#planT th{display:table-cell;border:1px solid #999;padding:4px}#planT td::before{display:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="6" fill="currentColor" style="color:var(--acc)"/><circle cx="32" cy="32" r="16" fill="none" stroke="var(--acc)" stroke-width="4"/><circle cx="32" cy="32" r="27" fill="none" stroke="var(--acc)" stroke-width="3" opacity=".5"/></svg>
+  <div><h1>REZONANȚA</h1><p>Cum faci ca lumea să te asculte — comunicare și media, pas cu pas. Offline, fără cont, fără urmărire.</p></div>
+</header>
+<noscript><p style="padding:16px">Această aplicație are nevoie de JavaScript activat.</p></noscript>
+<div class="app">
+<nav id="nav" role="tablist" aria-label="Secțiunile aplicației"></nav>
+<main id="main">
+
+<!-- PRINCIPII -->
+<section id="s-princ" role="tabpanel" aria-labelledby="t-princ">
+  <h2>Principii: de ce te ascultă (sau nu) lumea</h2>
+  <p class="lead">Oamenii nu ignoră mesajele din răutate, ci pentru că nu văd ce câștigă. Atinge fiecare punct și șansele cresc.</p>
+  <div id="princ"></div>
+</section>
+
+<!-- MESAJ -->
+<section id="s-msg" role="tabpanel" aria-labelledby="t-msg">
+  <h2>Constructorul de mesaj</h2>
+  <p class="lead">Un mesaj bun încape într-o frază și se sprijină pe cel mult trei argumente. Completează „casa mesajului”, apoi copiază versiunile gata făcute.</p>
+  <div class="card">
+    <div class="row c2">
+      <div><label>Cine e publicul? <small>(unul principal)</small></label><input data-s="msg.pub" placeholder="ex.: părinți de elevi de gimnaziu"></div>
+      <div><label>Ce știu / cred ei acum?</label><input data-s="msg.now" placeholder="ex.: cred că procedura e lungă și inutilă"></div>
+    </div>
+    <label>Ce vrei să facă după ce te aud? <small>(acțiunea dorită)</small></label>
+    <input data-s="msg.act" placeholder="ex.: să depună dosarul online până la 30 noiembrie">
+    <label>Mesajul principal <small>(ideal ≤ 15 cuvinte, o singură idee)</small></label>
+    <input data-s="msg.main" id="msgMain" placeholder="ex.: Dosarul online durează 10 minute și te scutește de două drumuri.">
+    <div class="cnt" id="msgCnt" aria-live="polite"></div>
+    <div class="row c3">
+      <div><label>Argument 1</label><textarea data-s="msg.a1" placeholder="Beneficiu concret pentru ei"></textarea></div>
+      <div><label>Argument 2</label><textarea data-s="msg.a2"></textarea></div>
+      <div><label>Argument 3</label><textarea data-s="msg.a3"></textarea></div>
+    </div>
+    <div class="row c2">
+      <div><label>Dovadă / cifră <small>(verificabilă)</small></label><textarea data-s="msg.proof" placeholder="ex.: 8 din 10 dosare depuse online au fost aprobate în 5 zile"></textarea></div>
+      <div><label>Un om, o poveste scurtă</label><textarea data-s="msg.story" placeholder="ex.: Ioana, din Buzău, a terminat totul de pe telefon, în pauza de prânz"></textarea></div>
+    </div>
+    <div class="row c2">
+      <div><label>Apel la acțiune</label><input data-s="msg.cta" placeholder="ex.: Intră pe exemplu.ro/dosar"></div>
+      <div><label>Ton</label>
+        <select data-s="msg.tone"><option>cald și direct</option><option>oficial dar clar</option><option>energic</option><option>calm și asigurător</option><option>ironic-prietenos</option></select></div>
+    </div>
+    <div class="actions">
+      <button class="btn" id="msgGen" type="button">Generează versiunile</button>
+      <button class="btn alt" type="button" data-ex="msg">Încarcă un exemplu</button>
+      <button class="btn alt" type="button" data-clear="msg">Golește</button>
+    </div>
+  </div>
+  <div id="msgOut" class="outs" aria-live="polite"></div>
+</section>
+
+<!-- CANALE -->
+<section id="s-can" role="tabpanel" aria-labelledby="t-can">
+  <h2>Alege canalul media potrivit</h2>
+  <p class="lead">Nu toate canalele servesc același scop. Spune ce vrei să obții și vezi unde merită să investești timp. Scorurile sunt orientative, bazate pe practica obișnuită, nu pe măsurători.</p>
+  <div class="card">
+    <div class="row c2">
+      <div><label>Obiectivul principal</label>
+        <select id="goal"><option value="not">Să fim cunoscuți (notorietate)</option><option value="inc">Să câștigăm încredere</option><option value="act">Să determinăm o acțiune</option><option value="mob">Să mobilizăm o comunitate</option><option value="exp">Să explicăm ceva complex</option></select></div>
+      <div><label>Publicul e mai ales</label>
+        <select id="aud"><option value="tin">Tineri (16–30)</option><option value="adu">Adulți (30–55)</option><option value="sen">Seniori (55+)</option><option value="pro">Profesioniști / decidenți</option></select></div>
+    </div>
+    <div id="rec" aria-live="polite"></div>
+  </div>
+  <div id="canale"></div>
+</section>
+
+<!-- COMUNICAT -->
+<section id="s-com" role="tabpanel" aria-labelledby="t-com">
+  <h2>Comunicatul de presă</h2>
+  <p class="lead">Un jurnalist citește primele două rânduri. Pune acolo tot ce contează, în ordinea importanței (piramida inversată).</p>
+  <div class="card">
+    <div class="row c3">
+      <div><label>Organizația</label><input data-s="pr.org"></div>
+      <div><label>Localitatea</label><input data-s="pr.city"></div>
+      <div><label>Data</label><input data-s="pr.date" type="date"></div>
+    </div>
+    <label>Titlu <small>(verb activ, ≤ 80 caractere, fără jargon)</small></label>
+    <input data-s="pr.title" id="prTitle"><div class="cnt" id="prTitleCnt" aria-live="polite"></div>
+    <label>Subtitlu <small>(opțional, o idee în plus)</small></label><input data-s="pr.sub">
+    <div class="row c3">
+      <div><label>Cine?</label><input data-s="pr.who"></div>
+      <div><label>Ce face / ce s-a întâmplat?</label><input data-s="pr.what"></div>
+      <div><label>Când?</label><input data-s="pr.when" placeholder="ex.: 1–30 noiembrie"></div>
+    </div>
+    <div class="row c3">
+      <div><label>Unde?</label><input data-s="pr.where"></div>
+      <div><label>De ce contează?</label><input data-s="pr.why"></div>
+      <div><label>Cum?</label><input data-s="pr.how"></div>
+    </div>
+    <div class="row c2">
+      <div><label>Citat <small>(o opinie, nu o informație)</small></label><textarea data-s="pr.quote"></textarea></div>
+      <div><label>Cine spune citatul? <small>(nume, funcție)</small></label><input data-s="pr.qa"></div>
+    </div>
+    <label>Context și cifre</label><textarea data-s="pr.ctx"></textarea>
+    <label>Despre organizație <small>(2–3 propoziții)</small></label><textarea data-s="pr.about"></textarea>
+    <label>Contact pentru presă</label><input data-s="pr.contact" placeholder="Nume, telefon, e-mail">
+    <div class="actions">
+      <button class="btn" id="prGen" type="button">Generează comunicatul</button>
+      <button class="btn alt" type="button" data-ex="pr">Încarcă un exemplu</button>
+      <button class="btn alt" type="button" data-clear="pr">Golește</button>
+    </div>
+  </div>
+  <div id="prOut" aria-live="polite"></div>
+  <div class="card"><b>Verificare înainte de trimitere</b><div id="prChk"></div>
+    <div class="bar" style="margin-top:8px" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="prBarWrap" aria-label="Progres verificare"><i id="prBar" style="width:0"></i></div></div>
+</section>
+
+<!-- INTERVIU -->
+<section id="s-int" role="tabpanel" aria-labelledby="t-int">
+  <h2>Pregătirea pentru interviu</h2>
+  <p class="lead">La radio, TV sau podcast ai câteva secunde. Pregătește trei mesaje și învață să te întorci la ele.</p>
+  <div class="card">
+    <label>Subiectul interviului / emisiunea</label><input data-s="iv.sub">
+    <label>Ce vrei să rămână în mintea ascultătorului? <small>(3 mesaje, fiecare ≤ 20 de cuvinte)</small></label>
+    <input data-s="iv.m1" placeholder="Mesaj 1" id="ivM1"><div class="cnt" id="m1c"></div>
+    <input data-s="iv.m2" placeholder="Mesaj 2"><div class="cnt" id="m2c"></div>
+    <input data-s="iv.m3" placeholder="Mesaj 3"><div class="cnt" id="m3c"></div>
+    <label>Dovadă sau poveste pentru fiecare mesaj</label><textarea data-s="iv.ev"></textarea>
+    <label>Întrebări incomode la care trebuie să fii pregătit <small>(una pe rând)</small></label>
+    <textarea data-s="iv.q" placeholder="ex.: De ce ați întârziat atât?&#10;Cât costă?"></textarea>
+    <div class="actions">
+      <button class="btn" id="ivGen" type="button">Generează fișa de interviu</button>
+      <button class="btn alt" type="button" data-ex="iv">Încarcă un exemplu</button>
+      <button class="btn alt" type="button" data-clear="iv">Golește</button>
+    </div>
+  </div>
+  <div id="ivOut" aria-live="polite"></div>
+  <div class="card"><b>Formula răspunsului: R-P-M-D</b>
+    <ul><li><b>R</b>ăspunde direct la întrebare, într-o propoziție.</li>
+    <li><b>P</b>unte: „Important e și că…”, „Ce contează cu adevărat…”.</li>
+    <li><b>M</b>esajul tău cheie, spus simplu.</li>
+    <li><b>D</b>ovada: o cifră sau un exemplu cu om.</li></ul></div>
+  <div id="ivTips"></div>
+</section>
+
+<!-- CLARITATE -->
+<section id="s-txt" role="tabpanel" aria-labelledby="t-txt">
+  <h2>Analizorul de claritate</h2>
+  <p class="lead">Lipește un text (comunicat, postare, discurs). Aplicația marchează propozițiile lungi și expresiile greoaie. Scorul este o euristică, nu un verdict. Totul rămâne în browserul tău.</p>
+  <div class="card">
+    <label for="txt">Textul tău</label>
+    <textarea id="txt" data-s="txt" maxlength="300000" style="min-height:180px" placeholder="Lipește aici textul…"></textarea>
+    <div class="actions">
+      <button class="btn" id="txtGo" type="button">Analizează</button>
+      <button class="btn alt" id="txtClr" type="button">Șterge</button>
+    </div>
+  </div>
+  <div id="txtOut" aria-live="polite"></div>
+</section>
+
+<!-- PLAN -->
+<section id="s-plan" role="tabpanel" aria-labelledby="t-plan">
+  <h2>Planul de comunicare</h2>
+  <p class="lead">Ce nu e planificat nu se repetă, iar mesajul trebuie auzit de mai multe ori ca să prindă. Completează tabelul și exportă-l.</p>
+  <div class="card">
+    <label>Obiectiv SMART <small>(specific, măsurabil, realist, cu termen)</small></label>
+    <input data-s="plan.goal" placeholder="ex.: 500 de dosare online până la 31 ianuarie, față de 120 acum">
+    <label>Perioada</label><input data-s="plan.per" placeholder="ex.: 1 decembrie – 31 ianuarie">
+  </div>
+  <div class="card"><table id="planT"></table>
+    <div class="actions">
+      <button class="btn" id="planAdd" type="button">+ Rând</button>
+      <button class="btn alt" id="planEx" type="button">Copiază ca text</button>
+      <button class="btn alt" id="planCsv" type="button">Descarcă CSV</button>
+      <button class="btn alt" id="planTpl" type="button">Pornește de la un model</button>
+    </div>
+  </div>
+  <div class="card"><b>Regula ritmului</b>
+    <ul><li>Un mesaj principal are nevoie de mai multe contacte ca să fie reținut: țintește minimum 3 canale diferite.</li>
+    <li>Repetă-l în forme diferite: text, imagine, poveste, cifră. Nu există un număr magic de repetări, dar o singură apariție rareori ajunge.</li>
+    <li>Fixează o dată la două săptămâni pentru măsurat și corectat.</li></ul></div>
+</section>
+
+<!-- CRIZĂ -->
+<section id="s-cri" role="tabpanel" aria-labelledby="t-cri">
+  <h2>Comunicarea în criză</h2>
+  <p class="lead">În primele ore se decide cine povestește întâmplarea: tu sau alții. Tăcerea este adesea interpretată ca vinovăție.</p>
+  <div id="crisis"></div>
+  <div class="card"><b>Șablon de declarație de criză</b>
+    <label>Ce s-a întâmplat? <small>(fapte confirmate, nimic în plus)</small></label><textarea data-s="cr.f"></textarea>
+    <label>Ce facem acum?</label><textarea data-s="cr.a"></textarea>
+    <label>Cum vă ajutăm / cum vă informăm mai departe?</label><textarea data-s="cr.n"></textarea>
+    <label>Când revenim cu noutăți?</label><input data-s="cr.t" placeholder="ex.: azi la ora 18:00">
+    <div class="actions"><button class="btn" id="crGen" type="button">Generează declarația</button></div>
+    <div id="crOut" aria-live="polite"></div>
+  </div>
+</section>
+
+</main>
+</div>
+<div class="foot">
+  <button class="btn alt" id="bPrint" type="button">Tipărește</button>
+  <button class="btn alt" id="bExp" type="button">Exportă datele (.json)</button>
+  <button class="btn alt" id="bImp" type="button">Importă datele</button>
+  <button class="btn alt" id="bWipe" type="button">Șterge toate datele</button>
+  <input type="file" id="fImp" accept="application/json,.json" hidden aria-label="Fișier de importat">
+</div>
+<footer>REZONANȚA · aplicație single-file, offline, trade-free · datele tale rămân doar în acest browser</footer>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+"use strict";
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const KEY="rezonanta_v1", CAP=5000, TXTCAP=300000;
+const words=t=>(String(t).match(/[\p{L}\p{N}][\p{L}\p{N}'’-]*/gu)||[]);
+const ro=s=>String(s==null?"":s).replace(/ş/g,"ș").replace(/Ş/g,"Ș").replace(/ţ/g,"ț").replace(/Ţ/g,"Ț");
+const R=s=>ro(s).trim();
+const sent=s=>{s=R(s);return !s?"":/[.!?…:;"”»)]$/.test(s)?s:s+"."};
+const cap1=s=>s?s.charAt(0).toLocaleUpperCase("ro")+s.slice(1):s;
+
+/* ---------- toast + confirmare în doi pași (fără alert/confirm) ---------- */
+let tt=null;
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("on"),3600)}
+function arm(btn,fn){
+  if(btn.dataset.armed){clearTimeout(+btn.dataset.armed);delete btn.dataset.armed;btn.classList.remove("armed");btn.textContent=btn.dataset.l0;fn();return}
+  btn.dataset.l0=btn.textContent;btn.textContent="Sigur? Apasă încă o dată";btn.classList.add("armed");
+  btn.dataset.armed=String(setTimeout(()=>{delete btn.dataset.armed;btn.classList.remove("armed");btn.textContent=btn.dataset.l0},3500));
+}
+
+/* ---------- constante ---------- */
+const PCOLS=[["pub","Public"],["msg","Mesaj"],["can","Canal"],["fr","Frecvență"],["kpi","Indicator"],["resp","Cine"]];
+const PRCHK=["Titlul spune ce s-a întâmplat, cu un verb activ.","Primul paragraf răspunde la cine, ce, când, unde, de ce.","Există un motiv clar „de ce acum”.","Include un citat cu opinie, nu o simplă informație.","Cifrele au sursă și sunt verificate.","Nu are jargon, sigle neexplicate sau superlative nedovedite.","Are o lungime de maxim o pagină.","Numele și funcțiile sunt scrise corect.","Contactul pentru presă răspunde la telefon azi.","Imaginile sau materialele video sunt atașate sau accesibile prin link, cu acordul persoanelor din ele.","De regulă, trimiterea merge mai bine la mijlocul săptămânii, dimineața.","Mesajul principal se vede și dacă se citește doar titlul."];
+const FIELDS=$$("[data-s]").map(e=>e.dataset.s);
+
+/* ---------- stare + sanitizare (JSON necunoscut nu are voie să strice aplicația) ---------- */
+const str=(v,c)=>typeof v==="string"?v.slice(0,c):"";
+function sanitize(raw){
+  const o=raw&&typeof raw==="object"&&!Array.isArray(raw)?raw:{};
+  const s={msg:{},pr:{},iv:{},cr:{},plan:{rows:[]},chk:{pr:{}},txt:""};
+  FIELDS.forEach(f=>{
+    if(f==="txt")return;
+    const [g,k]=f.split(".");const src=o[g];
+    if(src&&typeof src==="object"&&!Array.isArray(src)&&Object.prototype.hasOwnProperty.call(src,k)&&typeof src[k]==="string")s[g][k]=src[k].slice(0,CAP);
+  });
+  s.txt=str(o.txt,TXTCAP);
+  const rows=o.plan&&Array.isArray(o.plan.rows)?o.plan.rows.slice(0,200):[];
+  s.plan.rows=rows.map(r=>{const x={};PCOLS.forEach(([c])=>{x[c]=str(r&&typeof r==="object"?r[c]:"",CAP)});return x});
+  const pc=o.chk&&o.chk.pr&&typeof o.chk.pr==="object"?o.chk.pr:{};
+  PRCHK.forEach((_,i)=>{if(pc[i]===true)s.chk.pr[i]=true});
+  return s;
+}
+let S=sanitize(null);
+try{const r=localStorage.getItem(KEY);if(r)S=sanitize(JSON.parse(r))}catch(e){S=sanitize(null)}
+const getP=p=>{const [g,k]=p.split(".");return k===undefined?S[g]:S[g][k]};
+const setP=(p,v)=>{const [g,k]=p.split(".");if(k===undefined)S[g]=v;else S[g][k]=v};
+let st=null,warned=false;
+function flush(){clearTimeout(st);st=null;try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){if(!warned){warned=true;toast("Nu pot salva local (stocare blocată sau plină). Folosește „Exportă datele”.")}}}
+function save(){clearTimeout(st);st=setTimeout(flush,250)}
+addEventListener("pagehide",flush);
+document.addEventListener("visibilitychange",()=>{if(document.hidden)flush()});
+
+/* ---------- accesibilitate: etichete legate de câmpuri ---------- */
+let uid=0;
+$$("label:not(.chk)").forEach(l=>{
+  if(l.htmlFor)return;let n=l.nextElementSibling;
+  while(n&&!/^(INPUT|TEXTAREA|SELECT)$/.test(n.tagName))n=n.nextElementSibling;
+  if(n){n.id=n.id||"f"+(++uid);l.htmlFor=n.id}
+});
+$$("input:not([type=file]),textarea,select").forEach(e=>{
+  if(!e.id)e.id="f"+(++uid);
+  if(!document.querySelector('label[for="'+e.id+'"]'))e.setAttribute("aria-label",e.placeholder||e.dataset.s||"câmp");
+  if(e.tagName!=="SELECT"&&e.type!=="date"&&!e.maxLength||e.maxLength<0)if(e.id!=="txt")e.maxLength=CAP;
+});
+
+/* ---------- legare câmpuri ---------- */
+$$("[data-s]").forEach(el=>{
+  const v=getP(el.dataset.s);
+  if(typeof v==="string"&&v!==""){if(el.tagName==="SELECT"){if($$("option",el).some(o=>o.value===v))el.value=v}else el.value=v}
+  else if(el.tagName==="SELECT")setP(el.dataset.s,el.value);
+  el.addEventListener("input",()=>{el.removeAttribute("aria-invalid");setP(el.dataset.s,el.value);save();live()});
+  el.addEventListener("change",()=>{setP(el.dataset.s,el.value);save()});
+});
+$$("[data-clear]").forEach(b=>b.addEventListener("click",()=>arm(b,()=>{
+  const k=b.dataset.clear;S[k]={};save();
+  $$('[data-s^="'+k+'."]').forEach(e=>{e.value=e.tagName==="SELECT"?e.options[0].value:"";if(e.tagName==="SELECT")setP(e.dataset.s,e.value)});
+  const out={msg:"#msgOut",pr:"#prOut",iv:"#ivOut"}[k];if(out)$(out).innerHTML="";
+  live();toast("Câmpurile au fost golite.");
+})));
+
+/* ---------- exemple ---------- */
+const EX={
+ msg:{pub:"părinți de elevi de gimnaziu",now:"cred că procedura de înscriere e lungă și complicată",act:"să depună dosarul online până pe 30 noiembrie",main:"Înscrierea online durează zece minute și te scutește de două drumuri la secretariat.",a1:"Depui dosarul de pe telefon, oricând, fără program la ghișeu.",a2:"Primești confirmarea pe e-mail în aceeași zi.",a3:"Dacă ai greșit ceva, corectezi singur, fără să refaci dosarul.",proof:"Anul trecut, 8 din 10 dosare depuse online au fost aprobate din prima",story:"Ioana, mamă a unui elev de clasa a V-a, a terminat totul în pauza de prânz",cta:"Intră pe exemplu.ro/inscriere",tone:"cald și direct"},
+ pr:{org:"Asociația Exemplu",city:"Cluj-Napoca",date:"",title:"Înscrierea la gimnaziu se face acum online, în zece minute",sub:"Platforma nouă elimină două drumuri la secretariat",who:"Asociația Exemplu",what:"lansează platforma de înscriere online pentru clasa a V-a",when:"1–30 noiembrie",where:"exemplu.ro/inscriere",why:"Părinții economisesc timp, iar școlile primesc dosare complete din prima",how:"Dosarul se depune de pe telefon sau calculator, iar confirmarea vine pe e-mail în aceeași zi",quote:"Ne-am dorit ca un părinte să poată rezolva totul în pauza de prânz, fără să ceară liber",qa:"Maria Popescu, director executiv",ctx:"Anul trecut, 8 din 10 dosare depuse online au fost aprobate din prima. Platforma este gratuită și funcționează pe orice telefon.",about:"Asociația Exemplu sprijină școlile din Cluj să simplifice procedurile pentru familii.",contact:"Ana Ionescu, 07xx xxx xxx, presa@exemplu.ro"},
+ iv:{sub:"Înscrierea online la gimnaziu — invitat la radio, dimineața",m1:"Înscrierea online durează zece minute și elimină două drumuri la școală.",m2:"Platforma este gratuită și funcționează pe orice telefon.",m3:"Dacă greșești ceva, poți corecta singur, fără să refaci dosarul.",ev:"Povestea Ioanei: a terminat în pauza de prânz. Cifra: 8 din 10 dosare aprobate din prima.",q:"Ce se întâmplă cu părinții fără internet?\nDe ce nu ați făcut asta mai devreme?\nCe se întâmplă dacă platforma se blochează?"}
+};
+$$("[data-ex]").forEach(b=>b.addEventListener("click",()=>{
+  const k=b.dataset.ex;const ex=Object.assign({},EX[k]);
+  if(k==="pr")ex.date=new Date().toISOString().slice(0,10);
+  Object.keys(ex).forEach(f=>{S[k][f]=ex[f];const e=$('[data-s="'+k+"."+f+'"]');if(e)e.value=ex[f]});
+  save();live();toast("Exemplu încărcat. Modifică-l după nevoie.");
+}));
+
+/* ---------- navigare (tab-uri accesibile) ---------- */
+const TABS=[["princ","Principii"],["msg","Mesaj"],["can","Canale"],["com","Comunicat"],["int","Interviu"],["txt","Claritate"],["plan","Plan"],["cri","Criză"]];
+const nav=$("#nav");
+TABS.forEach(([id,n],i)=>{
+  const b=document.createElement("button");b.type="button";b.id="t-"+id;b.dataset.t=id;
+  b.setAttribute("role","tab");b.setAttribute("aria-controls","s-"+id);
+  b.innerHTML='<span class="ni" aria-hidden="true">'+(i+1)+'</span><span>'+esc(n)+'</span>';
+  b.addEventListener("click",()=>{show(id);try{if(location.hash!=="#"+id)history.replaceState(null,"","#"+id)}catch(e){}});
+  b.addEventListener("keydown",e=>{
+    const k={ArrowRight:1,ArrowDown:1,ArrowLeft:-1,ArrowUp:-1}[e.key];
+    if(k||e.key==="Home"||e.key==="End"){e.preventDefault();
+      const j=e.key==="Home"?0:e.key==="End"?TABS.length-1:(i+k+TABS.length)%TABS.length;show(TABS[j][0],true)}
+  });
+  nav.appendChild(b);
+});
+function show(id,focus){
+  if(!TABS.some(t=>t[0]===id))id="princ";
+  $$("section").forEach(s=>s.classList.toggle("on",s.id==="s-"+id));
+  $$("#nav button").forEach(b=>{
+    const on=b.dataset.t===id;b.classList.toggle("on",on);b.setAttribute("aria-selected",String(on));b.tabIndex=on?0:-1;
+    if(on){try{b.scrollIntoView({inline:"center",block:"nearest"})}catch(e){}if(focus)b.focus()}
+  });
+  try{localStorage.setItem(KEY+"_tab",id)}catch(e){}
+  $("#toast").classList.remove("on");
+  if(id==="plan")growAll();
+  window.scrollTo(0,0);
+}
+addEventListener("resize",()=>{if($("#s-plan").classList.contains("on"))growAll()});
+addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(TABS.some(t=>t[0]===h))show(h)});
+function reveal(el){if(!el)return;const rm=matchMedia("(prefers-reduced-motion:reduce)").matches;try{el.scrollIntoView({behavior:rm?"auto":"smooth",block:"start"})}catch(e){}}
+function need(sel,msg){const e=$(sel);if(e&&!e.value.trim()){e.setAttribute("aria-invalid","true");e.focus();toast(msg);return false}return true}
+
+/* ---------- ieșiri + copiere ---------- */
+function outBox(title,text){return '<div class="card"><b>'+esc(title)+'</b><pre class="out">'+esc(text)+'</pre><div class="actions"><button type="button" class="btn alt" data-copy>Copiază</button></div></div>'}
+async function copyText(t,btn){
+  let done=false;
+  try{await navigator.clipboard.writeText(t);done=true}catch(e){
+    try{const a=document.createElement("textarea");a.value=t;a.setAttribute("readonly","");a.style.cssText="position:fixed;opacity:0;top:0";document.body.appendChild(a);a.select();done=document.execCommand("copy");a.remove()}catch(_){}
+  }
+  if(btn){const o=btn.dataset.l0||btn.textContent;btn.dataset.l0=o;btn.textContent=done?"Copiat ✓":"Selectează manual";setTimeout(()=>btn.textContent=o,1500)}
+  if(!done)toast("Copierea automată nu a mers. Selectează textul și copiază-l manual.");
+}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-copy]");if(b){const p=b.closest(".card").querySelector("pre");if(p)copyText(p.textContent,b)}});
+
+/* ---------- PRINCIPII ---------- */
+const PRINC=[
+["Începe cu publicul, nu cu tine","Nu te întreba „ce vreau să spun?”, ci „ce vrea să afle ei?”.","Fă un portret scurt al ascultătorului: ce îl preocupă, ce limbaj folosește, unde petrece timp. Un mesaj pentru „toată lumea” nu ajunge la nimeni. Alege un public principal pentru fiecare mesaj.","Înainte de a scrie, completează: „Persoana X vrea să știe Y, ca să poată Z.”"],
+["Un singur mesaj principal","Publicul reține o idee clară mai bine decât zece.","Alege o singură frază centrală, pe care o poți spune în 10–15 secunde. Restul sunt argumente care o susțin (cel mult trei). Dacă fiecare propoziție merge în altă direcție, publicul nu reține nimic.","Test: poate un copil de 12 ani să repete mesajul după o singură auzire?"],
+["Ce câștigă ei? (relevanța)","Oamenii ascultă ce îi privește direct.","Traduce fiecare caracteristică într-un beneficiu: nu „platformă nouă de depunere”, ci „depui dosarul de pe telefon, fără drumuri”. Începe cu beneficiul, explică mecanismul după.","Înlocuiește „noi am lansat…” cu „tu poți acum…”."],
+["Esențialul primul (piramida inversată)","Cine nu citește decât un rând trebuie să înțeleagă tot.","Primul paragraf răspunde la cine, ce, când, unde, de ce. Detaliile urmează în ordinea descrescătoare a importanței. Așa poate fi tăiat de jos fără pierderi, iar jurnaliștii și cititorii grăbiți îți mulțumesc.","Titlul + primul paragraf trebuie să funcționeze singure."],
+["Om + cifră = poveste care convinge","Cifra dă credibilitate, omul dă emoție.","Oamenii rețin mai ușor povești decât statistici. Dar o poveste fără dovadă pare întâmplătoare, iar o cifră fără om e rece. Combină-le: un caz concret, urmat de cifra care arată că nu e singular.","„Maria a economisit 3 ore. Ca ea, 8 din 10 utilizatori au scurtat procedura.” (exemplu ilustrativ)"],
+["Limbaj simplu și concret","Propoziții scurte, verbe active, fără jargon.","Ca reper, țintește 12–18 cuvinte pe propoziție în medie. Evită „în vederea”, „în cadrul”, „implementare”, „sinergie”. Preferă cuvintele concrete (o școală, 40 de elevi) celor abstracte („beneficiari”, „resurse”). Dacă ai nevoie de un termen tehnic, explică-l o dată, simplu.","Folosește secțiunea Claritate pentru a verifica textul."],
+["Credibilitate: spune adevărul, adu dovezi","Încrederea se construiește greu și se pierde repede.","Citează surse, recunoaște limitele, corectează public greșelile. Evită superlativele nedovedite („cel mai bun”, „unic”). Fii consecvent: ce spui azi nu trebuie să contrazică ce ai spus luna trecută.","Mai bine „am rezolvat 70% și lucrăm la restul” decât „totul e perfect”."],
+["Momentul potrivit (hook-ul)","Presa publică ce e relevant acum.","Leagă mesajul de o știre, o dată, un eveniment, un sezon sau o dezbatere publică. Fără un motiv de „de ce acum”, un comunicat rămâne necitit. Ține un calendar al ocaziilor (zile internaționale, începutul anului școlar, sesiuni, sărbători).","Întreabă-te: „De ce ar conta asta mâine dimineață?”"],
+["Relația cu jurnaliștii","Ei au nevoie de subiecte și de oameni disponibili.","Fii util: răspunde repede, oferă date, imagini și un expert disponibil. Nu pretinde să vezi articolul înainte de publicare. Nu minți și nu spune „în off” ce nu vrei să vezi tipărit. Construiește relații între campanii, nu doar când ai nevoie.","Un jurnalist ajutat azi te sună și mâine."],
+["Repetiția și consecvența","Mesajul prinde după mai multe contacte, nu după unul.","Repetă același mesaj în canale și forme diferite. Când ție ți se pare plictisitor, abia atunci începe să fie auzit. Păstrează aceleași cuvinte-cheie și aceeași imagine.","Planifică mai multe apariții, nu una singură."],
+["Ascultă înapoi (dialog, nu monolog)","Comunicarea merge în două sensuri.","Citește comentariile, răspunde la întrebări, adună reacții și schimbă ce nu funcționează. Publicul care se simte auzit ascultă mai ușor. O critică întemeiată, recunoscută public, te crește în ochii oamenilor.","Rezervă 15 minute pe zi pentru a citi și a răspunde."],
+["Etica: fără manipulare","Persuasiunea onestă durează, manipularea explodează.","Nu exagera, nu ascunde costuri, nu fabrica urgențe false, nu folosi frica drept unică pârghie. Respectă demnitatea și datele personale ale celor din imagini și povești (cere acord, conform GDPR). Marchează clar conținutul plătit sau generat cu AI, dacă e cazul.","Test: ți-ar plăcea să afle toată lumea cum ai construit mesajul?"]
+];
+$("#princ").innerHTML=PRINC.map((p,i)=>'<details class="card"><summary><span class="n">'+(i+1)+'.</span><span>'+esc(p[0])+'<small>'+esc(p[1])+'</small></span></summary><div class="body"><p>'+esc(p[2])+'</p><div class="q">'+esc(p[3])+'</div></div></details>').join("");
+
+/* ---------- MESAJ ---------- */
+function msgCnt(){const n=words(S.msg.main||"").length,c=$("#msgCnt");if(!n){c.textContent="";c.className="cnt";return}c.textContent=n+" cuvinte"+(n>15?" — încearcă să scurtezi":" — bun");c.className="cnt "+(n>15?"bad":"ok")}
+$("#msgGen").addEventListener("click",()=>{
+  if(!need("#msgMain","Scrie măcar mesajul principal."))return;
+  const m=S.msg,main=sent(m.main);
+  const args=[m.a1,m.a2,m.a3].map(sent).filter(Boolean);
+  const proof=sent(m.proof),story=sent(m.story),cta=sent(m.cta);
+  const house="CASA MESAJULUI\n\nPublic: "+(R(m.pub)||"—")+"\nCe știu acum: "+(R(m.now)||"—")+"\nAcțiune dorită: "+(R(m.act)||"—")+"\nTon: "+(m.tone||"—")+"\n\nMESAJ PRINCIPAL\n"+main+"\n\nARGUMENTE\n"+(args.map((a,i)=>(i+1)+". "+a).join("\n")||"—")+"\n\nDOVADĂ: "+(proof||"—")+"\nPOVESTE: "+(story||"—")+"\nAPEL LA ACȚIUNE: "+(cta||"—");
+  const pitch=[story,main,args[0],proof,cta].filter(Boolean).join(" ");
+  const post=main+(proof?"\n\n"+proof:"")+(cta?"\n\n👉 "+cta:"");
+  const tw=(main+(cta?" "+cta:"")).trim();
+  const twWarn=tw.length>280?" — peste 280, scurtează":"";
+  const pub=R(m.pub);
+  const radio=["Bună ziua.",pub?"Dacă faceți parte din categoria „"+pub+"”, vă interesează asta:":"Vă interesează asta:",main,args[0],story,proof,cta].filter(Boolean).join(" ");
+  $("#msgOut").innerHTML=outBox("Casa mesajului",house)+outBox("Prezentare de 30 de secunde ("+words(pitch).length+" cuvinte)",pitch)+outBox("Postare pentru rețele sociale",post)+outBox("Versiune scurtă ("+tw.length+" caractere"+twWarn+")",tw)+outBox("Variantă vorbită (radio / podcast)",radio);
+  reveal($("#msgOut"));
+});
+
+/* ---------- CANALE ---------- */
+const CAN=[
+{n:"Presă scrisă și online (ziare, portaluri)",f:"Credibilitate, arhivă căutabilă, ajunge la decidenți.",s:"Spațiu limitat, depinzi de selecția redacției.",fmt:"Comunicat, articol de opinie, dosar de presă, conferință de presă",tip:"Trimite individual, cu un subiect de e-mail clar, nu liste mari în BCC. Oferă imagini bune și un om disponibil pentru declarații.",gr:"Comunicat de 2 pagini cu jargon, trimis vineri seara, fără un hook.",sc:{not:3,inc:5,act:2,mob:2,exp:4},au:{tin:2,adu:4,sen:4,pro:5}},
+{n:"Televiziune",f:"Acoperire largă, impact emoțional prin imagine.",s:"Foarte puțin timp pentru declarații (de regulă sub 30 de secunde), cere imagine și om la aparat.",fmt:"Declarație scurtă, reportaj, invitat în platou",tip:"Gândește vizual: ce se poate filma? Pregătește 2–3 fraze „de ținut minte” de maxim 20 de cuvinte. Privește la intervievator, nu la cameră.",gr:"Răspunsuri lungi, tehnice; ton plat; fără un exemplu cu om.",sc:{not:5,inc:3,act:3,mob:3,exp:2},au:{tin:1,adu:4,sen:5,pro:3}},
+{n:"Radio",f:"Intim, ajunge la oameni în mașină și la locul de muncă; poți explica mai mult decât la TV.",s:"Nu există imagine, atenția e împărțită.",fmt:"Interviu, intervenție telefonică, spot",tip:"Folosește povești și exemple pe care ascultătorul le „vede” în minte. Repetă ideea centrală de două ori, în cuvinte diferite. Rotunjește cifrele.",gr:"Cifre multe, propoziții lungi, sigle neexplicate.",sc:{not:4,inc:4,act:3,mob:3,exp:4},au:{tin:2,adu:4,sen:5,pro:3}},
+{n:"Podcast",f:"Audiență dedicată, ascultare lungă, încredere mare.",s:"Creștere lentă, audiența e de nișă.",fmt:"Invitat, serie proprie, episoade scurte",tip:"Alege podcasturile din nișa publicului tău. Vino cu povești, nu cu prezentare de produs. Pregătește două anecdote.",gr:"Autopromovare directă fără valoare pentru ascultător.",sc:{not:2,inc:5,act:2,mob:3,exp:5},au:{tin:5,adu:4,sen:1,pro:4}},
+{n:"Rețele sociale (video scurt, postări)",f:"Viteză, cost mic, dialog direct.",s:"Zgomot mare, algoritmi schimbători, atenție foarte scurtă.",fmt:"Reels / Shorts, carusel, poveste, live, comunitate",tip:"Primele secunde decid. Spune ideea din prima, subtitrează videoul (mulți privesc fără sonor), pune un singur apel la acțiune. Răspunde la comentarii cât mai repede.",gr:"Copiezi comunicatul oficial ca postare. Hashtaguri în exces.",sc:{not:4,inc:2,act:4,mob:5,exp:3},au:{tin:5,adu:4,sen:2,pro:3}},
+{n:"Newsletter / e-mail",f:"Audiență proprie, fără algoritm, rată bună de acțiune.",s:"Se construiește lent, riști să ajungi în spam.",fmt:"Buletin periodic, serie de invitații",tip:"Un subiect, un apel la acțiune, un subiect de e-mail scurt și clar. Cere acordul explicit și permite dezabonarea ușoară (GDPR).",gr:"Zece subiecte într-un mesaj, fără un titlu care să convingă.",sc:{not:2,inc:4,act:5,mob:3,exp:4},au:{tin:2,adu:4,sen:3,pro:5}},
+{n:"Eveniment / conferință / întâlnire publică",f:"Contact uman, încredere și angajament.",s:"Ajungi la puțini oameni, costă timp.",fmt:"Dezbatere, atelier, masă rotundă, ușă deschisă",tip:"Combină-l cu presa și cu transmisia live pentru a multiplica efectul. Lasă mult timp pentru întrebări. Adună contacte (cu acord).",gr:"Prezentări de 60 de minute fără interacțiune.",sc:{not:2,inc:5,act:4,mob:5,exp:4},au:{tin:3,adu:4,sen:4,pro:5}},
+{n:"Site / blog propriu",f:"Controlezi tot mesajul; rămâne ca referință.",s:"Nu îți aduce singur public, trebuie promovat.",fmt:"Pagină de explicații, întrebări frecvente, studii de caz",tip:"E locul unde trimiți oamenii din toate celelalte canale. Pune pe prima pagină ce vrei să facă vizitatorul, nu organigrama.",gr:"Limbaj instituțional, fără pagină de „începe aici”.",sc:{not:2,inc:4,act:4,mob:2,exp:5},au:{tin:3,adu:4,sen:3,pro:5}}
+];
+function canale(){
+  const g=$("#goal").value,a=$("#aud").value;
+  const r=CAN.map(c=>({c,sc:c.sc[g]*2+c.au[a]})).sort((x,y)=>y.sc-x.sc);
+  $("#rec").innerHTML='<p><b>Recomandare (în ordinea potrivirii):</b></p>'+r.slice(0,4).map((x,i)=>'<div style="margin:6px 0">'+(i+1)+'. '+esc(x.c.n)+' <span class="pill" style="background:'+(i<2?"var(--ok)":"var(--warn)")+'">'+x.sc+'/15</span></div>').join("")+'<p class="lead" style="margin:8px 0 0">Combină minimum 3 canale ca mesajul să se repete.</p>';
+  $("#canale").innerHTML=r.map(x=>{const c=x.c;return '<details class="card"><summary><span>'+esc(c.n)+'<small>'+esc(c.fmt)+'</small></span></summary><div class="body"><p><b>Forța:</b> '+esc(c.f)+'</p><p><b>Slăbiciunea:</b> '+esc(c.s)+'</p><p><b>Sfat practic:</b> '+esc(c.tip)+'</p><p><b>Greșeală frecventă:</b> '+esc(c.gr)+'</p></div></details>'}).join("");
+}
+$("#goal").addEventListener("change",canale);$("#aud").addEventListener("change",canale);canale();
+
+/* ---------- COMUNICAT ---------- */
+function prCnt(){const n=(S.pr.title||"").length,c=$("#prTitleCnt");if(!n){c.textContent="";c.className="cnt";return}c.textContent=n+" caractere"+(n>80?" — prea lung":" — bun");c.className="cnt "+(n>80?"bad":"ok")}
+const LUNI=["ianuarie","februarie","martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie"];
+const fmtD=d=>{const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d||"");if(!m||+m[2]<1||+m[2]>12)return"";return +m[3]+" "+LUNI[+m[2]-1]+" "+m[1]};
+$("#prGen").addEventListener("click",()=>{
+  if(!need("#prTitle","Scrie măcar titlul."))return;
+  const p=S.pr,V=k=>R(p[k]);
+  const city=[V("city").toLocaleUpperCase("ro"),fmtD(p.date)].filter(Boolean).join(", ");
+  const lead=sent(cap1([V("who"),V("what")].filter(Boolean).join(" ")));
+  const p1=((city?city+" — ":"")+[lead,sent(cap1(V("why")))].filter(Boolean).join(" ")).trim();
+  const when=V("when"),where=V("where");
+  const p2=[when?"Când: "+sent(when):"",where?"Unde: "+sent(where):"",V("how")?"Cum: "+sent(V("how")):""].filter(Boolean).join(" ");
+  const q=V("quote").replace(/^[„”"«]+|[„”"»]+$/g,"");
+  const parts=[
+    "COMUNICAT DE PRESĂ"+(V("org")?" — "+V("org"):""),"",
+    "PENTRU PUBLICARE IMEDIATĂ","",
+    V("title").toLocaleUpperCase("ro"),
+    V("sub")?V("sub"):null,"",
+    p1||null,
+    p2?"\n"+p2:null,
+    q?"\n„"+q.replace(/[.…]+$/,"")+"”, a declarat "+(V("qa")||"[nume, funcție]")+".":null,
+    V("ctx")?"\n"+sent(V("ctx")):null,
+    V("about")?"\nDespre "+(V("org")||"organizație")+"\n"+sent(V("about")):null,
+    V("contact")?"\nContact pentru presă\n"+V("contact"):null,"","###"
+  ].filter(x=>x!==null);
+  $("#prOut").innerHTML=outBox("Comunicat generat",parts.join("\n"));
+  reveal($("#prOut"));
+});
+function prChk(){
+  const c=S.chk.pr;
+  $("#prChk").innerHTML=PRCHK.map((t,i)=>'<label class="chk"><input type="checkbox" data-i="'+i+'"'+(c[i]?" checked":"")+'><span>'+esc(t)+'</span></label>').join("");
+  const k=PRCHK.filter((_,i)=>c[i]).length,pc=Math.round(k/PRCHK.length*100);
+  $("#prBar").style.width=pc+"%";$("#prBarWrap").setAttribute("aria-valuenow",String(pc));
+  $$("#prChk input").forEach(e=>e.addEventListener("change",()=>{if(e.checked)c[e.dataset.i]=true;else delete c[e.dataset.i];save();prChk();const n=$('#prChk input[data-i="'+e.dataset.i+'"]');if(n)n.focus()}));
+}
+
+/* ---------- INTERVIU ---------- */
+function ivCnt(){["m1","m2","m3"].forEach(k=>{const n=words(S.iv[k]||"").length,c=$("#"+k+"c");if(!n){c.textContent="";c.className="cnt";return}c.textContent=n+" cuvinte"+(n>20?" — prea lung pentru o frază de ținut minte":"");c.className="cnt "+(n>20?"bad":"ok")})}
+const TIPS=[
+["Radio",["Vorbește ca și cum ai explica unui prieten.","Nu te baza pe imagini; descrie.","Ține lângă tine un pahar cu apă și evită foșnetul hârtiilor."]],
+["Televiziune",["Privește la intervievator, nu în cameră (dacă nu vorbești direct către public).","Poartă culori simple, fără dungi fine sau alb strălucitor.","Păstrează mâinile calme și spatele drept; zâmbește când e firesc."]],
+["Presă scrisă",["Spune-i jurnalistului ce poate publica; „în off” nu există dacă nu ați convenit înainte.","Trimite după interviu cifrele exacte, în scris.","Poți cere să verifici citatele (nu tot articolul), dar nu ai dreptul să le impui."]],
+["Online / live",["Verifică lumina din față și sunetul înainte.","Ține telefonul pe silențios.","Dă răspunsuri scurte: dacă nu prinzi ideea repede, privitorul trece mai departe."]]
+];
+const BRIDGE=["„Important de știut este și că…”","„Ce văd eu ca fiind esențial este…”","„Lasă-mă să pun lucrurile în context…”","„Da, și mai ales…”","„Dincolo de asta, oamenii ne întreabă…”"];
+$("#ivGen").addEventListener("click",()=>{
+  if(!need("#ivM1","Scrie măcar primul mesaj cheie."))return;
+  const v=S.iv,ms=[v.m1,v.m2,v.m3].map(R).filter(Boolean);
+  const qs=(v.q||"").split("\n").map(R).filter(Boolean);
+  const std=["Care e cea mai mare critică pe care o primiți și cum răspundeți?","Cât costă și cine plătește?","Ce ați greșit?","De ce acum?","Ce se întâmplă dacă nu reușiți?"];
+  const all=qs.concat(std.filter(q=>!qs.includes(q)));
+  const t="FIȘĂ DE INTERVIU"+(R(v.sub)?" — "+R(v.sub):"")+"\n\nINTRARE (primele 20 de secunde)\n„"+ms[0]+"”\n\nMESAJELE CHEIE\n"+ms.map((m,i)=>(i+1)+". "+m).join("\n")+"\n\nDOVEZI / POVEȘTI\n"+(R(v.ev)||"—")+"\n\nÎNTREBĂRI INCOMODE — răspunde cu R-P-M-D\n"+all.map((q,i)=>(i+1)+". "+q+"\n   Răspuns direct → punte → «"+ms[i%ms.length]+"» → dovadă").join("\n")+"\n\nPUNȚI\n"+BRIDGE.join("\n")+"\n\nÎNCHIDERE\n„Dacă ar fi să rețineți un singur lucru: "+ms[0].replace(/[.!?…]+$/,"")+".”";
+  $("#ivOut").innerHTML=outBox("Fișa ta",t);reveal($("#ivOut"));
+});
+$("#ivTips").innerHTML=TIPS.map(([n,l])=>'<details class="card"><summary>'+esc(n)+'</summary><div class="body"><ul>'+l.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ul></div></details>').join("");
+
+/* ---------- CLARITATE ---------- */
+const JARGON=["în vederea","în cadrul","având în vedere faptul că","în condițiile în care","se impune","demers","implementare","implementăm","stakeholder","sinergi","proactiv","paradigm","optimizare","valorificare","operaționaliz","eficientiz","beneficiari","la nivelul","în regim de","în scopul","prin intermediul","a fi în măsură","aferent","în acest sens","pe cale de consecință","comunicăm că","vă informăm că","precizăm că","menționăm că","datorită faptului că","din cauza faptului că","în ceea ce privește","cu privire la","în baza"];
+const FM={"ă":"a","â":"a","î":"i","ș":"s","ş":"s","ț":"t","ţ":"t","Ă":"a","Â":"a","Î":"i","Ș":"s","Ş":"s","Ț":"t","Ţ":"t"};
+const FOLD=s=>s.replace(/[\s\S]/g,c=>FM[c]||(c>="A"&&c<="Z"?c.toLowerCase():c));
+const JRX=new RegExp("(?<![\\p{L}\\p{N}])(?:"+JARGON.map(FOLD).sort((a,b)=>b.length-a.length).map(j=>j.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|")+")\\p{L}*","gu");
+const syl=w=>Math.max(1,(FOLD(w).match(/[aeiou]+/g)||[]).length);
+const ABBR=/(?<![\p{L}])(dr|nr|art|str|ex|prof|alin|pct|vol|fig|tel|ing|lit|conf|lect|asist|sc|bl|ap|et|cca|ian|feb|mar|apr|iun|iul|aug|sept|oct|nov|dec)\./giu;
+function splitSent(t){
+  const p=t.replace(ABBR,"$1\u0001");
+  return p.split(/(?<=[.!?…])\s+|\n+/).map(s=>s.replace(/\u0001/g,".").trim()).filter(Boolean);
+}
+function dur(n,wpm){const sec=Math.round(n/wpm*60);return sec<90?sec+" s":Math.round(sec/60)+" min"}
+function analyze(t){
+  const sents=splitSent(t);const w=words(t);if(!w.length||!sents.length)return null;
+  const lens=sents.map(s=>words(s).length);
+  const avg=w.length/sents.length;
+  const longS=lens.filter(n=>n>25).length;
+  const longW=w.filter(x=>x.length>=13).length;
+  const jc=(FOLD(t).match(JRX)||[]).length;
+  const pas=(t.match(/(?<![\p{L}])(este|sunt|a fost|au fost|va fi|vor fi)\s+\p{L}{3,}(?:at|ată|ați|ate|it|ită|iți|ite|ut|ută|uți|ute)(?![\p{L}])/giu)||[]).length;
+  const low=t.toLowerCase();
+  const noi=(low.match(/(?<![\p{L}])(noi|nostru|noastră|nouă|noștri|nostre)(?![\p{L}])/gu)||[]).length;
+  const voi=(low.match(/(?<![\p{L}])(dumneavoastră|dvs|voi|vostru|vouă|tu|tău|te|vă)(?![\p{L}])/gu)||[]).length;
+  const nums=(t.match(/\d+/g)||[]).length;
+  const exc=(t.match(/!/g)||[]).length;
+  let score=100;
+  score-=Math.min(30,Math.max(0,avg-17)*2.5);
+  score-=Math.min(25,longS/sents.length*60);
+  score-=Math.min(20,jc/w.length*100*5);
+  score-=Math.min(15,pas/w.length*100*3);
+  score-=Math.min(10,longW/w.length*100*1.5);
+  score=Math.round(Math.max(0,Math.min(100,score)));
+  return {sents,lens,w,avg,longS,longW,jc,pas,noi,voi,nums,exc,score};
+}
+function hl(sents,lens){
+  return sents.map((s,i)=>{
+    const f=FOLD(s);let out="",last=0,m;JRX.lastIndex=0;
+    while((m=JRX.exec(f))){out+=esc(s.slice(last,m.index))+"<mark>"+esc(s.slice(m.index,m.index+m[0].length))+"</mark>";last=m.index+m[0].length;if(!m[0].length)JRX.lastIndex++}
+    out+=esc(s.slice(last));
+    return lens[i]>25?'<span class="long" title="'+lens[i]+' cuvinte">'+out+"</span>":out;
+  }).join(" ");
+}
+function txtGo(){
+  const t=$("#txt").value;S.txt=t;save();
+  const o=$("#txtOut");
+  if(!t.trim()){o.innerHTML="";toast("Lipește mai întâi un text.");return}
+  const a=analyze(t);
+  if(!a){o.innerHTML='<div class="card">Nu am găsit cuvinte de analizat.</div>';return}
+  const col=a.score>=75?"var(--ok)":a.score>=50?"var(--warn)":"var(--bad)";
+  const verd=a.score>=75?"Clar și ușor de urmărit":a.score>=50?"Acceptabil, dar poți simplifica":"Greu de urmărit — simplifică";
+  const tips=[];
+  if(a.avg>18)tips.push("Propozițiile au în medie "+a.avg.toFixed(1)+" cuvinte. Ca reper, țintește 12–18: sparge propozițiile lungi la „și”, „iar”, „care”.");
+  if(a.longS)tips.push((a.longS===1?"O propoziție depășește":a.longS+" propoziții depășesc")+" 25 de cuvinte (fundal galben mai jos). "+(a.longS===1?"Împarte-o":"Împarte-le")+" în două.");
+  if(a.jc)tips.push((a.jc===1?"O expresie greoaie (subliniată)":a.jc+" expresii greoaie (subliniate)")+". Înlocuiește-le cu cuvinte de zi cu zi: „în vederea” → „pentru”, „în cadrul” → „la / în”.");
+  if(a.pas>1)tips.push("Posibile construcții pasive: "+a.pas+". Spune cine face: nu „a fost realizat”, ci „am realizat”.");
+  if(a.noi>a.voi*1.5&&a.noi>2)tips.push("Textul vorbește mai mult despre „noi” ("+a.noi+") decât despre „tu / dvs.” ("+a.voi+"). Mută accentul pe public.");
+  if(!a.nums)tips.push("Nu există nicio cifră sau dată concretă. O dovadă măsurabilă crește credibilitatea.");
+  if(a.exc>2)tips.push(a.exc+" semne de exclamare. Prea multe slăbesc forța mesajului.");
+  if(a.longW>a.w.length*0.06)tips.push("Multe cuvinte foarte lungi. Caută sinonime mai scurte.");
+  if(!tips.length)tips.push("Textul arată bine. Verifică doar dacă mesajul principal e în primul rând.");
+  o.innerHTML='<div class="card"><div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap"><div style="font-size:2.3rem;font-weight:700;color:'+col+'" aria-label="Scor '+a.score+' din 100">'+a.score+'</div><div style="flex:1;min-width:180px"><b>'+verd+'</b><div class="bar" style="margin-top:6px"><i style="width:'+a.score+'%;background:'+col+'"></i></div></div></div>'+
+  '<div class="stats"><div class="stat"><b>'+a.w.length+'</b><span>cuvinte</span></div><div class="stat"><b>'+a.sents.length+'</b><span>propoziții</span></div><div class="stat"><b>'+a.avg.toFixed(1)+'</b><span>cuvinte / propoziție</span></div><div class="stat"><b>'+a.jc+'</b><span>expresii greoaie</span></div><div class="stat"><b>'+a.pas+'</b><span>posibile pasive</span></div><div class="stat"><b>'+dur(a.w.length,200)+'</b><span>citit · '+dur(a.w.length,130)+' vorbit</span></div></div>'+
+  '<b>Ce poți îmbunătăți</b><ul>'+tips.map(x=>"<li>"+esc(x)+"</li>").join("")+'</ul></div>'+
+  '<div class="card"><b>Textul marcat</b><p class="lead" style="margin:2px 0 8px">Fundal galben = propoziție peste 25 de cuvinte · roșu ondulat = expresie greoaie</p><div class="hl">'+hl(a.sents,a.lens)+'</div></div>';
+  reveal(o);
+}
+$("#txtGo").addEventListener("click",txtGo);
+$("#txtClr").addEventListener("click",()=>{$("#txt").value="";S.txt="";save();$("#txtOut").innerHTML=""});
+
+/* ---------- PLAN ---------- */
+function grow(e){if(!e.offsetParent)return;e.style.height="auto";e.style.height=Math.min(e.scrollHeight+2,480)+"px"}
+function growAll(){$$("#planT textarea").forEach(grow)}
+function planT(){
+  const r=S.plan.rows;
+  $("#planT").innerHTML='<thead><tr>'+PCOLS.map(c=>"<th>"+c[1]+"</th>").join("")+'<th><span class="sr" style="position:absolute;left:-9999px">Acțiuni</span></th></tr></thead><tbody>'+
+    (r.length?r.map((row,i)=>"<tr>"+PCOLS.map(c=>'<td data-l="'+c[1]+'"><textarea rows="2" aria-label="'+c[1]+', rândul '+(i+1)+'" data-i="'+i+'" data-c="'+c[0]+'" maxlength="'+CAP+'">'+esc(row[c[0]])+"</textarea></td>").join("")+'<td class="x"><button type="button" class="btn alt sm" aria-label="Șterge rândul '+(i+1)+'" data-d="'+i+'">Șterge</button></td></tr>').join(""):'<tr><td colspan="7" style="padding:10px;color:var(--mut)">Nu există rânduri. Apasă „+ Rând” sau „Pornește de la un model”.</td></tr>')+"</tbody>";
+  $$("#planT textarea").forEach(e=>e.addEventListener("input",()=>{r[+e.dataset.i][e.dataset.c]=e.value;save();grow(e)}));
+  growAll();
+  $$("#planT [data-d]").forEach(b=>b.addEventListener("click",()=>{r.splice(+b.dataset.d,1);save();planT()}));
+}
+$("#planAdd").addEventListener("click",()=>{if(S.plan.rows.length>=200){toast("Maximum 200 de rânduri.");return}S.plan.rows.push({});save();planT();const t=$$("#planT textarea");if(t.length)t[t.length-PCOLS.length].focus()});
+const TPL=[
+ {pub:"Public principal",msg:"Mesajul principal într-o frază",can:"Newsletter + site",fr:"1 / săptămână",kpi:"rată de deschidere, clickuri",resp:""},
+ {pub:"Public principal",msg:"Povestea unui om real",can:"Rețele sociale (video scurt)",fr:"2 / săptămână",kpi:"vizualizări, distribuiri",resp:""},
+ {pub:"Presă",msg:"Dovada: cifra nouă",can:"Comunicat + telefon către 5 jurnaliști",fr:"1 / lună",kpi:"apariții în presă",resp:""},
+ {pub:"Comunitate",msg:"Invitație la acțiune",can:"Eveniment local",fr:"1 / lună",kpi:"participanți, contacte noi",resp:""}];
+$("#planTpl").addEventListener("click",e=>{
+  const go=()=>{S.plan.rows=TPL.map(r=>Object.assign({},r));save();planT()};
+  if(S.plan.rows.some(r=>PCOLS.some(c=>r[c[0]]))){arm(e.currentTarget,go)}else go();
+});
+function planText(){return "Obiectiv: "+(R(S.plan.goal)||"—")+"\nPerioada: "+(R(S.plan.per)||"—")+"\n\n"+S.plan.rows.map((r,i)=>(i+1)+". "+PCOLS.map(c=>c[1]+": "+(R(r[c[0]])||"—")).join(" | ")).join("\n")}
+$("#planEx").addEventListener("click",e=>copyText(planText(),e.currentTarget));
+/* CSV: protejat împotriva injecției de formule (=,+,-,@) în Excel */
+const csvQ=s=>{s=String(s==null?"":s);if(/^[=+\-@\t\r]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'};
+$("#planCsv").addEventListener("click",()=>{
+  const csv="﻿"+PCOLS.map(c=>csvQ(c[1])).join(",")+"\r\n"+S.plan.rows.map(r=>PCOLS.map(c=>csvQ(r[c[0]])).join(",")).join("\r\n");
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));a.download="plan-comunicare.csv";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+});
+
+/* ---------- CRIZĂ ---------- */
+const CRI=[
+["Prima oră","Confirmă faptele esențiale (nu presupune). Strânge echipa mică de decizie. Numește un singur purtător de cuvânt. Oprește postările programate. Pregătește o primă declarație scurtă, chiar dacă nu ai toate răspunsurile."],
+["Ce spui","Recunoaște ce s-a întâmplat, exprimă grija față de cei afectați, spune ce faci acum și când revii cu noutăți. Nu da vina pe alții, nu minimiza, nu specula."],
+["Unde spui","Pe canalele tale (site, rețele) înainte ca presa să le preia. Ține informațiile identice peste tot. Fixează comunicatul sus pe pagină."],
+["Cum asculți","Urmărește presa și rețelele. Răspunde la întrebările reale, corectează public informațiile false, cu calm. Nu șterge comentariile critice, ci doar insultele și mesajele ilegale."],
+["Ce nu faci","Nu minți (chiar și o minciună mică iese la iveală). Nu spune „fără comentarii”. Nu te ascunde. Nu te contrazice între purtători de cuvânt. Nu dezvălui date personale. Dacă sunt implicate probleme juridice sau de siguranță, consultă un specialist înainte de a publica."],
+["După criză","Fă o analiză: ce am făcut bine, ce nu. Actualizează planul. Mulțumește celor care au ajutat. Rămâi consecvent: încrederea se reface prin fapte repetate."]
+];
+$("#crisis").innerHTML=CRI.map((c,i)=>'<details class="card"'+(i===0?" open":"")+'><summary><span class="n">'+(i+1)+'.</span><span>'+esc(c[0])+'</span></summary><div class="body"><p>'+esc(c[1])+'</p></div></details>').join("");
+$("#crGen").addEventListener("click",()=>{
+  const c=S.cr;
+  if(!R(c.f)){const e=$('[data-s="cr.f"]');e.setAttribute("aria-invalid","true");e.focus();toast("Descrie faptele confirmate.");return}
+  $("#crOut").innerHTML=outBox("Declarație","Declarație"+(R(S.pr.org)?" — "+R(S.pr.org):"")+"\n\n"+sent(c.f)+"\n\nCe facem acum: "+(sent(c.a)||"[acțiuni]")+"\n\n"+(R(c.n)?sent(c.n)+"\n\n":"")+(R(c.t)?"Revenim cu noutăți "+R(c.t).replace(/[.!?…]+$/,"")+".":"Revenim cu noutăți imediat ce avem informații confirmate."));
+  reveal($("#crOut"));
+});
+
+/* ---------- date: tipărire, export, import, ștergere ---------- */
+$("#bPrint").addEventListener("click",()=>window.print());
+addEventListener("beforeprint",()=>$$("details").forEach(d=>{d.dataset.wasOpen=d.open?"1":"0";d.open=true}));
+addEventListener("afterprint",()=>$$("details").forEach(d=>{d.open=d.dataset.wasOpen==="1"}));
+$("#bExp").addEventListener("click",()=>{
+  flush();const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,2)],{type:"application/json"}));a.download="rezonanta-date.json";
+  document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+});
+$("#bImp").addEventListener("click",()=>$("#fImp").click());
+$("#fImp").addEventListener("change",e=>{
+  const f=e.target.files&&e.target.files[0];e.target.value="";if(!f)return;
+  if(f.size>2e6){toast("Fișier prea mare (peste 2 MB).");return}
+  const rd=new FileReader();
+  rd.onload=()=>{
+    try{const o=JSON.parse(String(rd.result));S=sanitize(o);flush();toast("Datele au fost importate.");setTimeout(()=>location.reload(),600)}
+    catch(err){toast("Fișier invalid: nu este un export REZONANȚA.")}
+  };
+  rd.onerror=()=>toast("Nu am putut citi fișierul.");
+  rd.readAsText(f);
+});
+$("#bWipe").addEventListener("click",e=>arm(e.currentTarget,()=>{
+  try{localStorage.removeItem(KEY);localStorage.removeItem(KEY+"_tab")}catch(_){}
+  S=sanitize(null);toast("Toate datele au fost șterse.");setTimeout(()=>location.reload(),500);
+}));
+
+/* ---------- pornire ---------- */
+function live(){msgCnt();prCnt();ivCnt()}
+planT();prChk();live();
+$("#txt").value=S.txt||"";
+let t0="princ";
+try{const h=location.hash.slice(1);t0=TABS.some(t=>t[0]===h)?h:(localStorage.getItem(KEY+"_tab")||"princ")}catch(e){}
+show(t0);
+</script>
+</body>
+</html>
