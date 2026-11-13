@@ -14,7 +14,7 @@
     "rezonanta_v1"
   ],
   "sizeBytes": 209266,
-  "sha256": "b97c8bc707e164c50d68a47e4cd6b9085d92eccff3d1e103bf08cc04b2432f98",
+  "sha256": "0269e5e05528fbb121a2315b6dcdc8ec85bbbf41de2bf0e4cc1ed9f60d0cb6e2",
   "csp": {
     "present": true,
     "directives": {
@@ -47,7 +47,7 @@
     ]
   },
   "kit": {
-    "version": "1.4.0",
+    "version": "1.5.0",
     "modules": [
       "core",
       "store",
