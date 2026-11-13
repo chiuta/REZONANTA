@@ -1,43 +1,37 @@
 # REZONANȚA
 
-**Cum faci ca lumea să te asculte — ghid și instrumente pentru comunicare și media.**
+**English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-O aplicație dintr-un singur fișier HTML, în limba română. Funcționează offline, fără cont, fără urmărire și fără nicio cerere de rețea (politica de securitate din pagină blochează orice conexiune externă).
+How to make people listen — a guide and tools for communication and media. One HTML file, offline, no account.
 
-## Ce conține
+**[Open the app →](https://rezonanta.chiuta.ro/)**
 
-| Secțiune | Ce face |
-|---|---|
-| **Principii** | 12 reguli pentru ca mesajul să fie ascultat, fiecare cu un test practic |
-| **Mesaj** | „Casa mesajului”: generează o prezentare de 30 de secunde, o postare, o variantă scurtă și una vorbită |
-| **Canale** | Recomandă canale media după obiectiv și public, cu forțe, slăbiciuni și greșeli frecvente (scoruri orientative) |
-| **Comunicat** | Generator de comunicat de presă în piramidă inversată, plus listă de verificare |
-| **Interviu** | Fișă de interviu cu mesaje cheie, întrebări incomode și formula R-P-M-D |
-| **Claritate** | Analizor de text: propoziții lungi, expresii greoaie, posibile pasive, scor euristic |
-| **Plan** | Plan de comunicare editabil, cu export în text sau CSV |
-| **Criză** | Pașii primei ore și șablon de declarație |
+_Version: 1.0 · Last updated: 2026-11-06_
 
-## Utilizare
+## Features
 
-- Deschide `index.html` în orice browser modern (telefon, tabletă sau calculator), sau folosește versiunea publicată prin GitHub Pages.
-- Interfața se adaptează la trei formate: bară de secțiuni derulabilă pe telefon și tabletă, meniu lateral pe desktop.
-- Tema deschisă sau întunecată urmează setarea sistemului.
-- Butonul „Încarcă un exemplu” din Mesaj, Comunicat și Interviu umple câmpurile cu un caz fictiv.
+- 12 principles for being listened to, each with a practical test.
+- Message house, channel recommender and press-release generator.
+- Interview sheet, clarity analyser, editable communication plan (text/CSV export) and first-hour crisis steps.
+- Everything stays in the browser; JSON export and import.
 
-## Date și confidențialitate
+## Usage
 
-- Tot ce scrii rămâne în `localStorage`, în browserul tău. Nimic nu pleacă pe vreun server.
-- „Exportă datele” salvează un fișier `.json`, iar „Importă datele” îl încarcă pe alt dispozitiv. Importul validează și curăță conținutul.
-- „Șterge toate datele” golește complet spațiul local.
-- Exportul CSV neutralizează formulele (`=`, `+`, `-`, `@`), ca să nu se execute în Excel.
+Open the page online, or download `index.html` and open it in a recent browser. No installation, no build.
 
-## Limite cunoscute
+## Limits
 
-- Analizorul de claritate este o euristică: scorul și detectarea pasivelor sunt orientative, iar lista de expresii greoaie este scurtă (se poate completa în `JARGON`, în cod).
-- Scorurile din „Canale” reflectă practica obișnuită, nu măsurători.
-- Textele generate sunt puncte de plecare. Verifică faptele, cifrele și numele înainte de a trimite ceva public.
-- Datele se salvează pe fiecare dispozitiv și browser în parte; folosește exportul pentru a le muta.
+- The interface is in Romanian only for now.
+- The clarity analyser is a heuristic and channel scores are indicative. Generated texts are starting points: check facts, figures and names before publishing.
 
-## Tehnic
+## Privacy
 
-HTML, CSS și JavaScript simplu, fără dependențe, fonturi sau resurse externe. Accesibilitate: tab-uri cu navigare de la tastatură, etichete asociate câmpurilor, contrast peste 5:1 în ambele teme, ținte tactile de cel puțin 44 px pe ecrane tactile.
+Everything stays in your browser (localStorage / IndexedDB); no account, no tracking. No network requests.
+
+## Support
+
+If this is useful, you can [buy me a coffee](https://buymeacoffee.com/echo.of.the.strings).
+
+## License
+
+MIT © Alexandru-Ionuț Chiuță (Alexio)

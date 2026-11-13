@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "slug": "rezonanta",
+  "name": "REZONANȚA — Cum faci ca lumea să te asculte",
+  "version": "1.0",
+  "updated": "2026-11-06",
+  "description": "REZONANȚA — ghid și instrumente offline pentru comunicare și media: mesaj, canale, comunicat de presă, interviu, claritate, plan, criză.",
+  "egress": [],
+  "permissions": [
+    "clipboard",
+    "localStorage"
+  ],
+  "storageKeys": [
+    "rezonanta_v1"
+  ],
+  "sizeBytes": 209266,
+  "sha256": "b97c8bc707e164c50d68a47e4cd6b9085d92eccff3d1e103bf08cc04b2432f98",
+  "csp": {
+    "present": true,
+    "directives": {
+      "default-src": "'none'",
+      "style-src": "'unsafe-inline'",
+      "script-src": "sha256×2",
+      "img-src": "data:",
+      "base-uri": "'none'",
+      "form-action": "'none'",
+      "frame-src": "'none'",
+      "object-src": "'none'"
+    },
+    "scriptInline": "hash",
+    "connect": "'none'"
+  },
+  "features": {
+    "export": true,
+    "import": true,
+    "i18n": [],
+    "pwa": {
+      "manifest": false,
+      "serviceWorker": false
+    },
+    "modules": [
+      "core",
+      "store",
+      "dialog",
+      "label",
+      "bundle"
+    ]
+  },
+  "kit": {
+    "version": "1.4.0",
+    "modules": [
+      "core",
+      "store",
+      "dialog",
+      "label",
+      "bundle"
+    ]
+  },
+  "selfSerializing": false
+}
