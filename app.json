@@ -8,19 +8,20 @@
   "egress": [],
   "permissions": [
     "clipboard",
-    "localStorage"
+    "localStorage",
+    "WebGL"
   ],
   "storageKeys": [
     "rezonanta_v1"
   ],
-  "sizeBytes": 449064,
-  "sha256": "14b0e90b82b78431d91c362b290f7802b7b6cec089d069abf906f2dcfa228e5d",
+  "sizeBytes": 500715,
+  "sha256": "14ffbde5e035253ece636958f02c23bf7446b28ad98ea8ad0fcebc26316ce178",
   "csp": {
     "present": true,
     "directives": {
       "default-src": "'none'",
       "style-src": "'unsafe-inline'",
-      "script-src": "sha256×2",
+      "script-src": "sha256×3",
       "img-src": "data:",
       "base-uri": "'none'",
       "form-action": "'none'",
