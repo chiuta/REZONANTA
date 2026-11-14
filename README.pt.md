@@ -6,7 +6,7 @@ Como fazer com que te ouçam — guia e ferramentas para comunicação e media. 
 
 **[Abrir a aplicação →](https://rezonanta.chiuta.ro/)**
 
-_Versão: 1.0 · Última atualização: 2026-11-06_
+_Versão: 1.1.0 · Última atualização: 2026-11-14_
 
 ## Funcionalidades
 
@@ -21,7 +21,7 @@ Abre a página online, ou descarrega `index.html` e abre-o num navegador recente
 
 ## Limites
 
-- Por agora, a interface está apenas em romeno.
+- A interface está disponível em 8 idiomas (romeno, inglês, francês, alemão, espanhol, italiano, húngaro, português); a escolha fica no rodapé da página. Os textos gerados seguem o idioma escolhido, e o analisador de clareza usa regras de jargão, passiva e pronomes desse idioma.
 - O analisador de clareza é uma heurística e as pontuações dos canais são indicativas. Os textos gerados são pontos de partida: verifica factos, números e nomes antes de publicar.
 
 ## Privacidade

@@ -6,7 +6,7 @@ Wie man Gehör findet — Leitfaden und Werkzeuge für Kommunikation und Medien.
 
 **[App öffnen →](https://rezonanta.chiuta.ro/)**
 
-_Version: 1.0 · Zuletzt aktualisiert: 2026-11-06_
+_Version: 1.1.0 · Zuletzt aktualisiert: 2026-11-14_
 
 ## Funktionen
 
@@ -21,7 +21,7 @@ Seite online öffnen oder `index.html` herunterladen und in einem aktuellen Brow
 
 ## Grenzen
 
-- Die Oberfläche gibt es vorerst nur auf Rumänisch.
+- Die Oberfläche gibt es in 8 Sprachen (Rumänisch, Englisch, Französisch, Deutsch, Spanisch, Italienisch, Ungarisch, Portugiesisch); die Auswahl steht in der Fußzeile. Erzeugte Texte folgen der gewählten Sprache, und der Klarheits-Analysator nutzt Regeln für Jargon, Passiv und Pronomen dieser Sprache.
 - Die Klarheitsanalyse ist eine Heuristik, die Kanalwerte sind Richtwerte. Erzeugte Texte sind Ausgangspunkte: Fakten, Zahlen und Namen vor der Veröffentlichung prüfen.
 
 ## Datenschutz

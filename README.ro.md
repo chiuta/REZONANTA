@@ -2,11 +2,11 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-_Versiune: 1.0 · Ultima actualizare: 2026-11-06_
+_Versiune: 1.1.0 · Ultima actualizare: 2026-11-14_
 
 **Cum faci ca lumea să te asculte — ghid și instrumente pentru comunicare și media.**
 
-O aplicație dintr-un singur fișier HTML, în limba română. Funcționează offline, fără cont, fără urmărire și fără nicio cerere de rețea (politica de securitate din pagină blochează orice conexiune externă).
+O aplicație dintr-un singur fișier HTML, cu interfața în 8 limbi (română, engleză, franceză, germană, spaniolă, italiană, maghiară, portugheză; alegerea se face în subsolul paginii; textele generate și analizorul de claritate urmează limba aleasă). Funcționează offline, fără cont, fără urmărire și fără nicio cerere de rețea (politica de securitate din pagină blochează orice conexiune externă).
 
 ## Ce conține
 
@@ -37,7 +37,7 @@ O aplicație dintr-un singur fișier HTML, în limba română. Funcționează of
 
 ## Limite cunoscute
 
-- Analizorul de claritate este o euristică: scorul și detectarea pasivelor sunt orientative, iar lista de expresii greoaie este scurtă (se poate completa în `JARGON`, în cod).
+- Analizorul de claritate este o euristică: scorul și detectarea pasivelor sunt orientative, iar lista de expresii greoaie este scurtă (se poate completa, pentru fiecare limbă, în `LXD`, în cod).
 - Scorurile din „Canale” reflectă practica obișnuită, nu măsurători.
 - Textele generate sunt puncte de plecare. Verifică faptele, cifrele și numele înainte de a trimite ceva public.
 - Datele se salvează pe fiecare dispozitiv și browser în parte; folosește exportul pentru a le muta.

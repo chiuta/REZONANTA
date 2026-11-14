@@ -6,7 +6,7 @@ Come farsi ascoltare — guida e strumenti per comunicazione e media. Un solo fi
 
 **[Apri l’app →](https://rezonanta.chiuta.ro/)**
 
-_Versione: 1.0 · Ultimo aggiornamento: 2026-11-06_
+_Versione: 1.1.0 · Ultimo aggiornamento: 2026-11-14_
 
 ## Funzioni
 
@@ -21,7 +21,7 @@ Apri la pagina online, oppure scarica `index.html` e aprilo in un browser recent
 
 ## Limiti
 
-- Per ora l’interfaccia è solo in rumeno.
+- L’interfaccia è disponibile in 8 lingue (rumeno, inglese, francese, tedesco, spagnolo, italiano, ungherese, portoghese); la scelta si trova nel piè di pagina. I testi generati seguono la lingua scelta, e l’analizzatore di chiarezza usa regole di gergo, passivo e pronomi di quella lingua.
 - L’analizzatore di chiarezza è un’euristica e i punteggi dei canali sono indicativi. I testi generati sono punti di partenza: verifica fatti, cifre e nomi prima di pubblicare.
 
 ## Privacy

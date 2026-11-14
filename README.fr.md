@@ -6,7 +6,7 @@ Comment se faire écouter — guide et outils pour la communication et les médi
 
 **[Ouvrir l’application →](https://rezonanta.chiuta.ro/)**
 
-_Version : 1.0 · Dernière mise à jour : 2026-11-06_
+_Version : 1.1.0 · Dernière mise à jour : 2026-11-14_
 
 ## Fonctionnalités
 
@@ -21,7 +21,7 @@ Ouvrez la page en ligne, ou téléchargez `index.html` et ouvrez-le dans un navi
 
 ## Limites
 
-- L’interface n’est pour l’instant qu’en roumain.
+- L’interface existe en 8 langues (roumain, anglais, français, allemand, espagnol, italien, hongrois, portugais) ; le choix se trouve dans le pied de page. Les textes générés suivent la langue choisie, et l’analyseur de clarté applique des règles de jargon, de passif et de pronoms propres à cette langue.
 - L’analyseur de clarté est une heuristique et les scores des canaux sont indicatifs. Les textes générés sont des points de départ : vérifiez faits, chiffres et noms avant de publier.
 
 ## Confidentialité

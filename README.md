@@ -6,7 +6,7 @@ How to make people listen — a guide and tools for communication and media. One
 
 **[Open the app →](https://rezonanta.chiuta.ro/)**
 
-_Version: 1.0 · Last updated: 2026-11-06_
+_Version: 1.1.0 · Last updated: 2026-11-14_
 
 ## Features
 
@@ -21,7 +21,7 @@ Open the page online, or download `index.html` and open it in a recent browser. 
 
 ## Limits
 
-- The interface is in Romanian only for now.
+- The interface is available in 8 languages (Romanian, English, French, German, Spanish, Italian, Hungarian, Portuguese); pick one in the page footer. Generated texts follow the chosen language, and the clarity analyser uses jargon, passive and pronoun rules for that language.
 - The clarity analyser is a heuristic and channel scores are indicative. Generated texts are starting points: check facts, figures and names before publishing.
 
 ## Privacy

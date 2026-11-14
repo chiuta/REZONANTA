@@ -6,7 +6,7 @@ Hogyan érd el, hogy meghallgassanak — útmutató és eszközök a kommunikác
 
 **[Az alkalmazás megnyitása →](https://rezonanta.chiuta.ro/)**
 
-_Verzió: 1.0 · Utolsó frissítés: 2026-11-06_
+_Verzió: 1.1.0 · Utolsó frissítés: 2026-11-14_
 
 ## Funkciók
 
@@ -21,7 +21,7 @@ Nyisd meg az oldalt online, vagy töltsd le az `index.html` fájlt, és nyisd me
 
 ## Korlátok
 
-- A felület egyelőre csak románul érhető el.
+- A felület 8 nyelven érhető el (román, angol, francia, német, spanyol, olasz, magyar, portugál); a választó az oldal láblécében van. A generált szövegek a választott nyelven készülnek, az érthetőségi elemző pedig az adott nyelv zsargon-, szenvedő szerkezet- és névmásszabályait használja.
 - Az érthetőségelemző heurisztika, a csatornapontszámok tájékoztató jellegűek. A generált szövegek kiindulópontok: közzététel előtt ellenőrizd a tényeket, számokat és neveket.
 
 ## Adatvédelem

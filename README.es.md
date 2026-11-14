@@ -6,7 +6,7 @@ Cómo lograr que te escuchen — guía y herramientas para comunicación y medio
 
 **[Abrir la aplicación →](https://rezonanta.chiuta.ro/)**
 
-_Versión: 1.0 · Última actualización: 2026-11-06_
+_Versión: 1.1.0 · Última actualización: 2026-11-14_
 
 ## Funciones
 
@@ -21,7 +21,7 @@ Abre la página en línea, o descarga `index.html` y ábrelo en un navegador rec
 
 ## Límites
 
-- Por ahora la interfaz solo está en rumano.
+- La interfaz está disponible en 8 idiomas (rumano, inglés, francés, alemán, español, italiano, húngaro, portugués); la elección está en el pie de página. Los textos generados siguen el idioma elegido, y el analizador de claridad usa reglas de jerga, pasiva y pronombres de ese idioma.
 - El analizador de claridad es una heurística y las puntuaciones de canales son orientativas. Los textos generados son un punto de partida: comprueba hechos, cifras y nombres antes de publicar.
 
 ## Privacidad
