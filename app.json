@@ -14,8 +14,8 @@
   "storageKeys": [
     "rezonanta_v1"
   ],
-  "sizeBytes": 543782,
-  "sha256": "f74dc65c9fb9cfb779befc288fe430cdbab84df84e0f5e367f792e465058acfb",
+  "sizeBytes": 569244,
+  "sha256": "902c3b8222b76030b2bbb768e42e901699d6d4bba9d44931e6142eb212a24e36",
   "csp": {
     "present": true,
     "directives": {
@@ -52,6 +52,7 @@
       "core",
       "store",
       "dialog",
+      "view",
       "a11y",
       "label",
       "bundle"
@@ -63,6 +64,7 @@
       "core",
       "store",
       "dialog",
+      "view",
       "a11y",
       "label",
       "bundle"
