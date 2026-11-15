@@ -6,7 +6,7 @@ How to make people listen — a guide and tools for communication and media. One
 
 **[Open the app →](https://rezonanta.chiuta.ro/)**
 
-_Version: 1.1.1 · Last updated: 2026-11-15_
+_Version: 1.2.0 · Last updated: 2026-11-15_
 
 ## Features
 

@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-_Versiune: 1.1.1 · Ultima actualizare: 2026-11-15_
+_Versiune: 1.2.0 · Ultima actualizare: 2026-11-15_
 
 **Cum faci ca lumea să te asculte — ghid și instrumente pentru comunicare și media.**
 

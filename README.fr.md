@@ -6,7 +6,7 @@ Comment se faire écouter — guide et outils pour la communication et les médi
 
 **[Ouvrir l’application →](https://rezonanta.chiuta.ro/)**
 
-_Version : 1.1.1 · Dernière mise à jour : 2026-11-15_
+_Version : 1.2.0 · Dernière mise à jour : 2026-11-15_
 
 ## Fonctionnalités
 
