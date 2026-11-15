@@ -6,7 +6,7 @@ Come farsi ascoltare — guida e strumenti per comunicazione e media. Un solo fi
 
 **[Apri l’app →](https://rezonanta.chiuta.ro/)**
 
-_Versione: 1.1.0 · Ultimo aggiornamento: 2026-11-14_
+_Versione: 1.1.1 · Ultimo aggiornamento: 2026-11-15_
 
 ## Funzioni
 

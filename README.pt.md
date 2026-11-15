@@ -6,7 +6,7 @@ Como fazer com que te ouçam — guia e ferramentas para comunicação e media. 
 
 **[Abrir a aplicação →](https://rezonanta.chiuta.ro/)**
 
-_Versão: 1.1.0 · Última atualização: 2026-11-14_
+_Versão: 1.1.1 · Última atualização: 2026-11-15_
 
 ## Funcionalidades
 

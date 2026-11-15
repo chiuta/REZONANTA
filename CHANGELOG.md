@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1 — 2026-11-15
+
+- New: hyper-detailed fractal textures (fff-texturi 1.1.2) — the background and large surfaces (cards, panels, headers, buttons; tabs and dialogs that are hidden at load, once they open) get a locally generated material (WebGL2, no network, no images) that tiles seamlessly; the app keeps its own colours. Turn it off in the "Transparency" dialog or with `?notex=1`.
+
 ## 1.1.0 — 2026-11-14
 
 - Interface in 8 languages (ro, en, fr, de, es, it, hu, pt): selector in the page footer, language remembered, falls back to the browser language.
