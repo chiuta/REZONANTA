@@ -6,7 +6,7 @@ Wie man Gehör findet — Leitfaden und Werkzeuge für Kommunikation und Medien.
 
 **[App öffnen →](https://rezonanta.chiuta.ro/)**
 
-_Version: 1.2.2 · Zuletzt aktualisiert: 2026-11-17_
+_Version: 1.2.3 · Zuletzt aktualisiert: 2026-11-20_
 
 ## Funktionen
 

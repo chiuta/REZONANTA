@@ -6,7 +6,7 @@ Cómo lograr que te escuchen — guía y herramientas para comunicación y medio
 
 **[Abrir la aplicación →](https://rezonanta.chiuta.ro/)**
 
-_Versión: 1.2.2 · Última actualización: 2026-11-17_
+_Versión: 1.2.3 · Última actualización: 2026-11-20_
 
 ## Funciones
 

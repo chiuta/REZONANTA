@@ -6,7 +6,7 @@ Hogyan érd el, hogy meghallgassanak — útmutató és eszközök a kommunikác
 
 **[Az alkalmazás megnyitása →](https://rezonanta.chiuta.ro/)**
 
-_Verzió: 1.2.2 · Utolsó frissítés: 2026-11-17_
+_Verzió: 1.2.3 · Utolsó frissítés: 2026-11-20_
 
 ## Funkciók
 
