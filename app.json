@@ -3,7 +3,7 @@
   "slug": "rezonanta",
   "name": "REZONANȚA — Cum faci ca lumea să te asculte",
   "version": "1.2.3",
-  "updated": "2026-11-20",
+  "updated": "2026-11-22",
   "description": "REZONANȚA — ghid și instrumente offline pentru comunicare și media: mesaj, canale, comunicat de presă, interviu, claritate, plan, criză.",
   "egress": [],
   "permissions": [
@@ -14,8 +14,8 @@
   "storageKeys": [
     "rezonanta_v1"
   ],
-  "sizeBytes": 650549,
-  "sha256": "7131900b501eb76eb6225df269294a5303b5ef960e39366a2e767728320dd8ea",
+  "sizeBytes": 650609,
+  "sha256": "2f4b7931970a61ad5e521541b520d1e16ca9cccf56c5189a1a888a22379e770b",
   "csp": {
     "present": true,
     "directives": {
@@ -26,7 +26,8 @@
       "base-uri": "'none'",
       "form-action": "'none'",
       "frame-src": "'none'",
-      "object-src": "'none'"
+      "object-src": "'none'",
+      "upgrade-insecure-requests": "''"
     },
     "scriptInline": "hash",
     "connect": "'none'"
